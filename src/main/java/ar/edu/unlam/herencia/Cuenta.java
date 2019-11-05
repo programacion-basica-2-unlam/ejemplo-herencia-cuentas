@@ -15,7 +15,7 @@ public class Cuenta {
     public Cuenta(){}
 
 
-    public void extraer(Double monto){
+    public void extraer(Double monto) throws FondosInsuficientesException {
         //logica para extraer
 
         if( puedoExtraer(monto) ){

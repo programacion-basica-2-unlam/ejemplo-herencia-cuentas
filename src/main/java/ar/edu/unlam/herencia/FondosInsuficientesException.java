@@ -1,6 +1,6 @@
 package ar.edu.unlam.herencia;
 
-public class FondosInsuficientesException extends RuntimeException {
+public class FondosInsuficientesException extends Exception {
 
     public FondosInsuficientesException() {
     }

@@ -13,11 +13,13 @@ public class CuentaCorriente extends Cuenta{
 
 
     @Override
-    public void extraer(Double monto){
+    public void extraer(Double monto) throws FondosInsuficientesException {
 
         if(puedoExtraer(monto)){
 
             this.saldo -= monto;
+        }else{
+            throw new FondosInsuficientesException("La cuenta no tiene fondos");
         }
 
 

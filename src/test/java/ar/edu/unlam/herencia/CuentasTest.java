@@ -8,7 +8,7 @@ public class CuentasTest {
 
 
     @Test
-    public void extraerDesdeUnaCuenta(){
+    public void extraerDesdeUnaCuenta() throws FondosInsuficientesException {
 
          Persona luke = new Persona("Luke", "Skywalker", "31232432");
          Cuenta unaCuenta = new Cuenta("2202028348394", 50000d, luke);
@@ -25,7 +25,7 @@ public class CuentasTest {
     }
 
     @Test
-    public void noSePuedeExtraerUnMontoMayorAlSaldoDeUnaCuenta(){
+    public void noSePuedeExtraerUnMontoMayorAlSaldoDeUnaCuenta() throws FondosInsuficientesException {
 
         Persona luke = new Persona("Luke", "Skywalker", "31232432");
         Cuenta unaCuenta = new Cuenta("2202028348394", 50000d, luke);
@@ -52,7 +52,7 @@ public class CuentasTest {
     }
 
     @Test
-    public void queSePuedaGirarEnDescubierto(){
+    public void queSePuedaGirarEnDescubierto() throws FondosInsuficientesException {
 
         Double montoEnDescubierto = 2000d;
         Persona luke = new Persona("Luke", "Skywalker", "31232432");
@@ -68,7 +68,7 @@ public class CuentasTest {
     }
 
     @Test
-    public void queNoSePuedaExtraerMasDelGiroEnDescubierto(){
+    public void queNoSePuedaExtraerMasDelGiroEnDescubierto() throws FondosInsuficientesException {
 
 
         Double montoEnDescubierto = 2000d;
@@ -87,7 +87,7 @@ public class CuentasTest {
 
 
     @Test
-    public void queLuegoDeGirarEnDesubiertoDepositoYseActualizaElSaldo(){
+    public void queLuegoDeGirarEnDesubiertoDepositoYseActualizaElSaldo() throws FondosInsuficientesException {
 
         Double montoEnDescubierto = 2000d;
         Persona luke = new Persona("Luke", "Skywalker", "31232432");
@@ -104,5 +104,6 @@ public class CuentasTest {
 
     }
 
+    //Agregar un test que prueba los fondos insuficientes
 
 }
